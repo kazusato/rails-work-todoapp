@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>新規Todo</title>
+</head>
+<body>
+<h1>新規Todo</h1>
+<%= form_with model: @todo, url: todo_create_path, local: true do |todo| %>
+<%= todo.label :title, "タイトル" %>
+<%= todo.text_field :title %>
+
+<%= todo.submit %>
+<% end %>
+</body>
+</html>

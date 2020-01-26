@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo一覧</title>
+  <style>
+    table, tr, td, th {
+      background-color: pink;
+      border: black solid 1px;
+      border-collapse: collapse;
+    }
+    td, th {
+      padding: 0.3em;
+    }
+  </style>
+</head>
+<body>
+<h1>Todo一覧</h1>
+<table>
+  <tbody>
+  <tr>
+    <th>ID</th>
+    <th>タイトル</th>
+    <th>作成日時</th>
+  </tr>
+  <% @todo.each do |todo| %>
+  <tr>
+    <td><%= todo.id %></td>
+    <td><%= todo.title %></td>
+    <td><%= todo.create_timestamp %></td>
+  </tr>
+  <% end %>
+  </tbody>
+
+</table>
+<p>
+  <a href="/todo/new">新規Todo登録</a>
+</p>
+</body>
+</html>
