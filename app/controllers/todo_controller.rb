@@ -8,7 +8,7 @@ class TodoController < ApplicationController
   end
 
   def create
-    @todo = Todo.new(params.require(:todo).permit(:title))
+    @todo = Todo.new(params.require(:todo).permit(:title, :group_id))
     @todo.save
   end
 

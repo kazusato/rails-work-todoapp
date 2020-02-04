@@ -1,15 +1,21 @@
 <h1>Todo一覧</h1>
+<p>
+  <a href="/todo/new">新規Todo登録</a><br>
+  <a href="/todo/delete_all">Todo全件削除</a>
+</p>
 <table>
   <tbody>
   <tr>
     <th>ID</th>
     <th>タイトル</th>
+    <th>グループID</th>
     <th>作成日時</th>
   </tr>
   <% @todo.each do |todo| %>
   <tr>
     <td><%= todo.id %></td>
     <td><%= todo.title %></td>
+    <td><%= todo.group_id %></td>
     <td><%= todo.create_timestamp %></td>
   </tr>
   <% end %>

@@ -1,7 +1,8 @@
 <h1>新規Todo</h1>
 <%= form_with model: @todo, url: todo_create_path, local: true do |todo| %>
-<%= todo.label :title, "タイトル" %>
-<%= todo.text_field :title %>
-
+  <%= todo.label :title, "タイトル" %>
+  <%= todo.text_field :title %>
+  <%= todo.label :group_id, "グループID" %>
+  <%= todo.text_field :group_id %>
 <%= todo.submit %>
 <% end %>
