@@ -1,6 +1,7 @@
 <h1>Todo一覧</h1>
-<h2>全グループID</h2>
+<h2>グループID: <%= @group_id %></h2>
 <p>
+  <a href="/todo/list">全グループID表示</a><br>
   <a href="/todo/new">新規Todo登録</a><br>
   <a href="/todo/delete_all">Todo全件削除</a>
 </p>
@@ -16,7 +17,7 @@
   <tr>
     <td><%= todo.id %></td>
     <td><%= todo.title %></td>
-    <td><a href="/todo/list/<%= todo.group_id %>"><%= todo.group_id %></a></td>
+    <td><%= todo.group_id %></td>
     <td><%= todo.create_timestamp %></td>
   </tr>
   <% end %>
@@ -24,6 +25,7 @@
 
 </table>
 <p>
+  <a href="/todo/list">全グループID表示</a><br>
   <a href="/todo/new">新規Todo登録</a><br>
   <a href="/todo/delete_all">Todo全件削除</a>
 </p>

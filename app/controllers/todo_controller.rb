@@ -3,6 +3,11 @@ class TodoController < ApplicationController
     @todo = Todo.all
   end
 
+  def list_by_group_id
+    @todo = Todo.where("group_id = ?", params[:group_id])
+    @group_id = params[:group_id]
+  end
+
   def new
     @todo = Todo.new
   end
