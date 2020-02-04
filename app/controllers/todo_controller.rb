@@ -11,4 +11,8 @@ class TodoController < ApplicationController
     @todo = Todo.new(params.require(:todo).permit(:title))
     @todo.save
   end
+
+  def delete_all
+    Todo.delete_all
+  end
 end
